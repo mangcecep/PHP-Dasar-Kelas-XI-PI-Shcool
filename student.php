@@ -12,7 +12,13 @@ $no = 1;
 
 
 <div class="container mt-4">
-    <h2 class="text-center">List Student</h2>
+    <div class="d-flex justify-content-between">
+        <h2 class="text-center">List Student</h2>
+        <a href="/student/create.php" 
+        class="btn btn-sm bg-success text-white">
+            Adding Student
+        </a>
+    </div>
     <table class="table table-striped">
         <thead>
             <tr>
@@ -36,12 +42,12 @@ $no = 1;
                         </a>
                         <a 
                         class="btn btn-warning" 
-                        href="/student/update.php/<?= $row['id'] ?>">
+                        href="/student/update.php?id=<?= $row['id'] ?>">
                             Update
                         </a>
                         <a 
                         class="btn btn-danger"
-                        href="/student/delete.php/<?= $row['id'] ?>">
+                        href="/student/delete.php?id=<?= $row['id'] ?>">
                             Delete
                         </a>
                     </td>
